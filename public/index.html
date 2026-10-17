@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unduhanku — Download Video, Audio MP3 & Foto Sosial Media (TikTok, IG, X, YouTube)</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="title" content="Unduhanku — Download Video, Audio MP3 & Foto Sosial Media (TikTok, IG, X, YouTube)">
+    <meta name="description" content="Download video tanpa watermark, audio MP3, dan album slide foto dari TikTok, Instagram, Twitter/X, dan YouTube gratis dengan kualitas asli HD. Cepat, aman, dan tanpa registrasi.">
+    <meta name="keywords" content="download video tiktok tanpa watermark, unduh foto instagram carousel, download video twitter x, youtube mp3 downloader, tiktok photo mode download, unduhanku, save video instagram, download audio tiktok">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Unduhanku">
+    <meta name="theme-color" content="#09090b">
+    <link rel="canonical" href="/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Unduhanku — Download Video, Audio MP3 & Foto Sosial Media">
+    <meta property="og:description" content="Download video tanpa watermark, audio MP3, dan album slide foto dari TikTok, Instagram, Twitter/X, dan YouTube gratis dengan kualitas asli HD.">
+    <meta property="og:site_name" content="Unduhanku">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="/">
+    <meta name="twitter:title" content="Unduhanku — Download Video, Audio MP3 & Foto Sosial Media">
+    <meta name="twitter:description" content="Download video tanpa watermark, audio MP3, dan album slide foto dari TikTok, Instagram, Twitter/X, dan YouTube gratis dengan kualitas asli HD.">
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "Unduhanku",
+          "url": "/",
+          "description": "Layanan web gratis untuk download video tanpa watermark, audio MP3, dan album foto dari berbagai platform sosial media (TikTok, Instagram, Twitter/X, YouTube).",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "IDR"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Apakah layanan Unduhanku gratis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, seluruh fitur unduhan di Unduhanku 100% gratis tanpa biaya langganan, batasan kuota unduhan, atau kewajiban registrasi akun."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah video TikTok yang diunduh bebas watermark?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ya, Unduhanku mengekstrak stream video murni langsung dari server sumber sehingga bebas dari watermark logo TikTok."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah bisa mengunduh postingan berisi banyak foto atau video (Slide Album / Carousel)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bisa. Unduhanku secara otomatis mendeteksi format carousel/album pada TikTok Photo Mode, Instagram Carousel, maupun Twitter/X Multi-Image. Anda dapat mengunduh per slide atau sekaligus dengan tombol Unduh Semua."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Platform apa saja yang didukung oleh Unduhanku?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Unduhanku mendukung ribuan platform sosial media dan video terkemuka termasuk TikTok, Instagram, Twitter/X, YouTube, Facebook, Pinterest, Threads, dan Reddit."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Top Navigation -->
+        <header class="navbar">
+            <div class="brand">
+                <a href="/" class="brand-link">
+                    <span class="brand-name">Unduhanku</span>
+                </a>
+                <span class="status-pill" id="system-status-pill">
+                    <span class="status-dot"></span>
+                    <span id="status-text">Siap</span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-container">
+            <!-- Hero Header -->
+            <section class="hero-section" aria-labelledby="main-heading">
+                <h1 id="main-heading" class="hero-title">Pengunduh Media Sosial & Video Downloader</h1>
+                <p class="hero-subtitle">
+                    Unduh video resolusi tinggi tanpa watermark, lagu MP3, dan album slide foto langsung ke perangkat Anda secara gratis.
+                </p>
+
+                <!-- Platform Support Tags -->
+                <div class="platform-tags" aria-label="Platform yang didukung">
+                    <span>TikTok</span>
+                    <span class="dot">•</span>
+                    <span>Instagram</span>
+                    <span class="dot">•</span>
+                    <span>X / Twitter</span>
+                    <span class="dot">•</span>
+                    <span>YouTube</span>
+                    <span class="dot">•</span>
+                    <span>Facebook</span>
+                </div>
+            </section>
+
+            <!-- Input Form Section -->
+            <section class="downloader-card" aria-label="Formulir Unduhan">
+                <form id="download-form" class="url-form">
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-link input-icon" aria-hidden="true"></i>
+                        <input 
+                            type="url" 
+                            id="media-url-input" 
+                            placeholder="Tempel tautan video, foto, atau album di sini..." 
+                            required 
+                            autocomplete="off"
+                            spellcheck="false"
+                            aria-label="Tautan Media Sosial"
+                        >
+                        <button type="button" id="btn-paste" class="btn-paste-clipboard" title="Tempel dari Clipboard">
+                            <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
+                            <span>Tempel</span>
+                        </button>
+                    </div>
+                    <button type="submit" id="btn-analyze" class="btn-primary" aria-label="Periksa Tautan Media">
+                        <span class="btn-content">
+                            <span>Periksa</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </span>
+                        <div class="btn-spinner hidden" id="analyze-spinner" aria-hidden="true"></div>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Loading / Processing State -->
+            <section id="processing-state" class="processing-card hidden" aria-live="polite">
+                <div class="spinner-minimal" aria-hidden="true"></div>
+                <div class="processing-text">
+                    <h3 id="processing-title">Menganalisis tautan...</h3>
+                    <p id="processing-desc">Mengekstrak stream media dan daftar kualitas yang tersedia.</p>
+                </div>
+            </section>
+
+            <!-- Result Card -->
+            <section id="result-card" class="result-card hidden" aria-label="Hasil Analisis Media">
+                <div class="media-preview-grid">
+                    <!-- Thumbnail Column -->
+                    <div class="thumbnail-column">
+                        <div class="thumbnail-wrapper">
+                            <img id="media-thumbnail" src="" alt="Thumbnail Pratinjau Media" loading="lazy">
+                            <span class="duration-badge" id="media-duration">00:00</span>
+                            <span class="platform-badge" id="media-platform">Platform</span>
+                        </div>
+                    </div>
+
+                    <!-- Details Column -->
+                    <div class="details-column">
+                        <header class="media-header">
+                            <h2 id="media-title">Judul Media</h2>
+                            <div class="media-meta">
+                                <span><i class="fa-regular fa-user" aria-hidden="true"></i> <span id="media-uploader">Pengunggah</span></span>
+                                <span id="meta-views"><i class="fa-regular fa-eye" aria-hidden="true"></i> <span id="media-views">0</span> tayangan</span>
+                            </div>
+                        </header>
+
+                        <!-- Format Selector Tabs -->
+                        <div class="format-tabs" role="tablist" aria-label="Pilihan Format Media">
+                            <button class="tab-btn active" role="tab" aria-selected="true" data-tab="video" id="tab-video-btn">Video</button>
+                            <button class="tab-btn" role="tab" aria-selected="false" data-tab="audio" id="tab-audio-btn">Audio (MP3)</button>
+                            <button class="tab-btn" role="tab" aria-selected="false" data-tab="gallery" id="tab-gallery-btn">Gambar</button>
+                            <button class="tab-btn hidden" role="tab" aria-selected="false" data-tab="carousel" id="tab-carousel-btn">Slide Album (<span id="carousel-count">0</span>)</button>
+                        </div>
+
+                        <!-- Tab Content: Video -->
+                        <div class="tab-panel active" role="tabpanel" id="tab-panel-video" aria-labelledby="tab-video-btn">
+                            <div class="format-list" id="video-formats-container">
+                                <!-- Generated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Audio -->
+                        <div class="tab-panel" role="tabpanel" id="tab-panel-audio" aria-labelledby="tab-audio-btn">
+                            <div class="audio-card" id="audio-format-container">
+                                <!-- Generated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Gallery -->
+                        <div class="tab-panel" role="tabpanel" id="tab-panel-gallery" aria-labelledby="tab-gallery-btn">
+                            <div class="gallery-grid" id="gallery-container">
+                                <!-- Generated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Itemized Carousel -->
+                        <div class="tab-panel" role="tabpanel" id="tab-panel-carousel" aria-labelledby="tab-carousel-btn">
+                            <div class="carousel-action-bar">
+                                <div class="carousel-info-text">
+                                    <span id="carousel-summary-desc">Album dengan beberapa slide media.</span>
+                                </div>
+                                <div class="carousel-btns">
+                                    <button type="button" class="btn-subtle hidden" id="btn-carousel-audio">
+                                        <i class="fa-solid fa-music" aria-hidden="true"></i> <span>Audio Latar</span>
+                                    </button>
+                                    <button type="button" class="btn-primary-sm" id="btn-download-all">
+                                        <i class="fa-solid fa-download" aria-hidden="true"></i> <span>Unduh Semua</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="carousel-grid" id="carousel-items-container">
+                                <!-- Generated dynamically per slide card -->
+                            </div>
+                        </div>
+
+                        <!-- Action Status / Download Progress -->
+                        <div id="download-progress-box" class="download-progress-box hidden" aria-live="assertive">
+                            <div class="progress-info">
+                                <span id="download-status-text"><i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Memproses unduhan...</span>
+                                <span id="download-percentage"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEO Content Section: Cara Penggunaan (How It Works) -->
+            <section class="info-section" aria-labelledby="how-it-works-heading">
+                <h2 id="how-it-works-heading" class="section-title">Cara Mengunduh Media</h2>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-num">01</span>
+                        <h3 class="step-title">Salin Tautan</h3>
+                        <p class="step-desc">Buka aplikasi TikTok, Instagram, Twitter/X, atau YouTube, lalu salin tautan postingan atau video yang ingin disimpan.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-num">02</span>
+                        <h3 class="step-title">Tempel & Periksa</h3>
+                        <p class="step-desc">Tempelkan tautan ke kolom input di atas dan klik tombol Periksa. Engine akan menganalisis resolusi serta format file.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-num">03</span>
+                        <h3 class="step-title">Unduh File Asli</h3>
+                        <p class="step-desc">Pilih opsi resolusi video (1080p, 720p), audio MP3 jernih, atau simpan seluruh slide foto secara instan ke perangkat.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SEO Content Section: Fitur Unggulan -->
+            <section class="info-section" aria-labelledby="features-heading">
+                <h2 id="features-heading" class="section-title">Fitur & Keunggulan Unduhanku</h2>
+                <div class="features-grid">
+                    <article class="feature-item">
+                        <h3 class="feature-title"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Tanpa Watermark</h3>
+                        <p class="feature-desc">Mendapatkan video TikTok dan Instagram Reels bersih tanpa tanda air atau logo yang mengganggu.</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3 class="feature-title"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Dukungan Slide Album</h3>
+                        <p class="feature-desc">Mendukung multi-foto pada TikTok Photo Mode, Instagram Carousel, dan multi-image X/Twitter dengan tombol Unduh Semua.</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3 class="feature-title"><i class="fa-solid fa-music" aria-hidden="true"></i> Konversi Audio MP3</h3>
+                        <p class="feature-desc">Mengekstrak latar musik dan audio berkualitas tinggi dari video sosial media dengan satu kali klik.</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3 class="feature-title"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Cepat & Privat</h3>
+                        <p class="feature-desc">Tanpa perlu instalasi aplikasi tambahan atau pendaftaran akun. Langsung unduh dengan aman melalui browser.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SEO Content Section: FAQ -->
+            <section class="info-section faq-container" aria-labelledby="faq-heading">
+                <h2 id="faq-heading" class="section-title">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-question">Apakah layanan Unduhanku gratis?</summary>
+                        <div class="faq-answer">
+                            <p>Ya, seluruh fitur di Unduhanku 100% gratis tanpa batasan kuota unduhan, biaya tersembunyi, maupun kewajiban membuat akun.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Apakah video TikTok yang diunduh bebas dari watermark?</summary>
+                        <div class="faq-answer">
+                            <p>Ya. Sistem secara langsung mengekstrak stream video asli dari server TikTok sehingga file video yang disimpan bebas dari logo watermark.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Bagaimana cara mengunduh postingan berisi banyak foto (Slide Album)?</summary>
+                        <div class="faq-answer">
+                            <p>Ketika Anda memasukkan link postingan carousel (seperti TikTok Photo Mode, Instagram Album, atau Twitter multi-foto), tab Slide Album akan otomatis terbuka. Anda dapat mengunduh foto satu per satu atau menekan tombol Unduh Semua.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Di mana file hasil unduhan tersimpan?</summary>
+                        <div class="faq-answer">
+                            <p>File unduhan akan otomatis tersimpan di folder bawaan browser Anda, biasanya folder Downloads pada perangkat komputer atau galeri pada ponsel pintar.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-brand">Unduhanku &copy; 2026</p>
+                <p class="footer-disclaimer">
+                    Unduhanku tidak berafiliasi dengan TikTok, Instagram, Twitter/X, YouTube, maupun Facebook. Seluruh hak cipta media dimiliki oleh masing-masing pemilik konten.
+                </p>
+            </div>
+        </footer>
+
+
+        <!-- Toast Notifications -->
+        <div id="toast-container" class="toast-container" aria-live="polite"></div>
+    </div>
+
+    <!-- App Logic Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# .htaccess untuk folder public/
+# File ini memberitahu Apache (XAMPP) cara menangani URL
+
+# Aktifkan modul rewrite
+Options -MultiViews
+RewriteEngine On
+
+# Jika request adalah file/folder yang nyata, serve langsung
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Arahkan semua request ke index.php
+RewriteRule ^(.*)$ index.php [QSA,L]

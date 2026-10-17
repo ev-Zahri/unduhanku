@@ -1,0 +1,7 @@
+/vendor/
+/storage/downloads/*
+!/storage/downloads/.gitkeep
+/storage/history.sqlite
+.env
+.DS_Store
+Thumbs.db
