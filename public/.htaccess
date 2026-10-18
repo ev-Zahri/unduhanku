@@ -1,13 +1,64 @@
-# .htaccess untuk folder public/
-# File ini memberitahu Apache (XAMPP) cara menangani URL
+# ===================================================================
+# Unduhanku - Apache Web Server Optimization (.htaccess)
+# ===================================================================
 
-# Aktifkan modul rewrite
+# 1. Kompresi Aset (Gzip/Deflate) - Optimasi Kecepatan Transfer
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml font/woff font/woff2
+</IfModule>
+
+# 2. Browser Cache Lifetimes (Header Expires & Cache-Control)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    
+    # HTML tidak di-cache lama agar perubahan langsung ter-update
+    ExpiresByType text/html "access plus 0 seconds"
+    
+    # CSS, JavaScript & Fonts di-cache 1 tahun (immutable)
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    
+    # Gambar & Favicon di-cache 1 tahun
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Cache Control Header untuk aset statis
+    <FilesMatch "\.(css|js|woff2|woff|ttf|svg|jpg|jpeg|png|webp|ico)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+
+    # Cache Control Header untuk dokumen dinamis
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+    </FilesMatch>
+
+    # Security Headers (Best Practices 100)
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 3. URL Rewriting ke index.php
 Options -MultiViews
 RewriteEngine On
 
-# Jika request adalah file/folder yang nyata, serve langsung
+# Jika request adalah file atau folder yang nyata, serve langsung
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# Arahkan semua request ke index.php
+# Arahkan semua request lainnya ke index.php
 RewriteRule ^(.*)$ index.php [QSA,L]

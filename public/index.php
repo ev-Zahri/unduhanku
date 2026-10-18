@@ -87,7 +87,17 @@ $router->get('/', function () {
     $htmlPath = __DIR__ . '/index.html';
     if (file_exists($htmlPath)) {
         header('Content-Type: text/html; charset=utf-8');
-        readfile($htmlPath);
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+        $host = $_SERVER['HTTP_HOST'] ?? 'unduhanku.com';
+        $appUrl = rtrim($_ENV['APP_URL'] ?? "$protocol://$host", '/');
+
+        $html = file_get_contents($htmlPath);
+        // Pastikan canonical URL & Open Graph selalu absolute dan sesuai host aktif
+        if (!empty($appUrl) && !str_contains($appUrl, 'unduhanku.com')) {
+            $html = str_replace('https://unduhanku.com/', $appUrl . '/', $html);
+            $html = str_replace('https://unduhanku.com', $appUrl, $html);
+        }
+        echo $html;
     } else {
         header('Content-Type: application/json');
     }
@@ -95,12 +105,26 @@ $router->get('/', function () {
 
 $router->get('/robots.txt', function () {
     header('Content-Type: text/plain; charset=utf-8');
-    readfile(__DIR__ . '/robots.txt');
+    $content = file_get_contents(__DIR__ . '/robots.txt');
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'unduhanku.com';
+    $appUrl = rtrim($_ENV['APP_URL'] ?? "$protocol://$host", '/');
+    if (!empty($appUrl) && !str_contains($appUrl, 'unduhanku.com')) {
+        $content = str_replace('https://unduhanku.com', $appUrl, $content);
+    }
+    echo $content;
 });
 
 $router->get('/sitemap.xml', function () {
     header('Content-Type: application/xml; charset=utf-8');
-    readfile(__DIR__ . '/sitemap.xml');
+    $content = file_get_contents(__DIR__ . '/sitemap.xml');
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'unduhanku.com';
+    $appUrl = rtrim($_ENV['APP_URL'] ?? "$protocol://$host", '/');
+    if (!empty($appUrl) && !str_contains($appUrl, 'unduhanku.com')) {
+        $content = str_replace('https://unduhanku.com', $appUrl, $content);
+    }
+    echo $content;
 });
 
 // -------------------------------------------------------------

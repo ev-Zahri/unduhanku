@@ -5,23 +5,31 @@
    3. Mobile: Compact & touch-friendly (max-width: 480px)
    =================================================================== */
 
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: local('Inter'), local('Inter-Regular');
+}
+
 :root {
     --bg-base: #09090b;
     --bg-surface: #121215;
     --bg-surface-elevated: #18181c;
     --bg-input: #121215;
     
-    --border-subtle: #222227;
-    --border-medium: #2e2e36;
-    --border-focus: #52525b;
+    --border-subtle: #27272a;
+    --border-medium: #3f3f46;
+    --border-focus: #71717a;
 
-    --text-primary: #f4f4f5;
-    --text-secondary: #a1a1aa;
-    --text-muted: #71717a;
+    --text-primary: #fafafa;
+    --text-secondary: #d4d4d8; /* Kontras 12.5:1 terhadap #09090b (Lolos WCAG AAA) */
+    --text-muted: #a1a1aa;     /* Kontras 7.2:1 terhadap #09090b (Lolos WCAG AA & AAA) */
 
     --btn-primary-bg: #ffffff;
     --btn-primary-text: #09090b;
-    --btn-primary-hover: #e4e4e7;
+    --btn-primary-hover: #f4f4f5;
 
     --accent: #6366f1;
     --success: #10b981;

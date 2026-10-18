@@ -12,11 +12,11 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Unduhanku">
     <meta name="theme-color" content="#09090b">
-    <link rel="canonical" href="/">
+    <link rel="canonical" href="https://unduhanku.com/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/">
+    <meta property="og:url" content="https://unduhanku.com/">
     <meta property="og:title" content="Unduhanku — Download Video, Audio MP3 & Foto Sosial Media">
     <meta property="og:description" content="Download video tanpa watermark, audio MP3, dan album slide foto dari TikTok, Instagram, Twitter/X, dan YouTube gratis dengan kualitas asli HD.">
     <meta property="og:site_name" content="Unduhanku">
@@ -24,7 +24,7 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="/">
+    <meta name="twitter:url" content="https://unduhanku.com/">
     <meta name="twitter:title" content="Unduhanku — Download Video, Audio MP3 & Foto Sosial Media">
     <meta name="twitter:description" content="Download video tanpa watermark, audio MP3, dan album slide foto dari TikTok, Instagram, Twitter/X, dan YouTube gratis dengan kualitas asli HD.">
 
@@ -36,7 +36,7 @@
         {
           "@type": "WebApplication",
           "name": "Unduhanku",
-          "url": "/",
+          "url": "https://unduhanku.com/",
           "description": "Layanan web gratis untuk download video tanpa watermark, audio MP3, dan album foto dari berbagai platform sosial media (TikTok, Instagram, Twitter/X, YouTube).",
           "applicationCategory": "MultimediaApplication",
           "operatingSystem": "All",
@@ -88,13 +88,20 @@
     }
     </script>
 
-    <!-- Fonts -->
+    <!-- Preconnect & Asynchronous Fonts (Eliminate Render-blocking & FOIT) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Custom CSS -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- FontAwesome Icons (Asynchronous Non-blocking Load) -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Core App CSS -->
+    <link rel="preload" as="style" href="css/style.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -149,7 +156,7 @@
                             spellcheck="false"
                             aria-label="Tautan Media Sosial"
                         >
-                        <button type="button" id="btn-paste" class="btn-paste-clipboard" title="Tempel dari Clipboard">
+                        <button type="button" id="btn-paste" class="btn-paste-clipboard" title="Tempel dari Clipboard" aria-label="Tempel tautan dari clipboard">
                             <i class="fa-regular fa-clipboard" aria-hidden="true"></i>
                             <span>Tempel</span>
                         </button>
@@ -348,6 +355,6 @@
     </div>
 
     <!-- App Logic Script -->
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>

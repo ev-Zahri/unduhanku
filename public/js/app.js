@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="res-label">${v.label}</div>
                         <div class="size-label">${sizeText}</div>
                     </div>
-                    <button class="btn-download-item" data-fid="${v.id}" title="Unduh ${v.label}">
+                    <button class="btn-download-item" data-fid="${v.id}" title="Unduh ${v.label}" aria-label="Unduh resolusi ${v.label}">
                         <i class="fa-solid fa-download"></i>
                     </button>
                 `;
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.innerHTML = `
                     <img src="${imgUrl}" alt="${imgLabel}" loading="lazy">
                     <div class="gallery-badge">${imgSize}</div>
-                    <a href="${proxyDownloadUrl}" class="btn-dl-image" title="Unduh ${imgLabel}">
+                    <a href="${proxyDownloadUrl}" class="btn-dl-image" title="Unduh ${imgLabel}" aria-label="Unduh ${imgLabel}">
                         <i class="fa-solid fa-download"></i>
                     </a>
                 `;
@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="slide-title">${item.label}</div>
                             <div class="slide-meta">${item.resolution || (isVideo ? 'Video MP4' : 'Foto JPG')}</div>
                         </div>
-                        <button type="button" class="btn-slide-download">
+                        <button type="button" class="btn-slide-download" aria-label="Unduh ${badgeLabel} Slide ${item.slide}">
                             <i class="fa-solid fa-download"></i> Unduh ${badgeLabel}
                         </button>
                     </div>
